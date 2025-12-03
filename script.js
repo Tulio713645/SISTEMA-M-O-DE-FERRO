@@ -1,10 +1,9 @@
-const inputDia = document.querySelector("#dia")
-
 const btnEnviar = document.querySelector("#btnEnviar")
 
 const pResultado = document.querySelector("#resultado")
 
 function enviar() {
+    const inputDia = document.querySelector("#dia")
     let dia = parseInt(inputDia.value)
 
     if (dia < 1) {
