@@ -7,6 +7,14 @@ const pResultado = document.querySelector("#resultado")
 function enviar() {
     let dia = parseInt(inputDia.value)
 
+    if (dia < 1) {
+        inputDia.value = 1
+        dia = 1
+    } else if (dia > 31) {
+        inputDia.value = 31
+        dia = 31
+    }
+
     let patente = ""
 
     if (dia == 1) {
@@ -47,9 +55,6 @@ function enviar() {
         patente = "Jamanta pré-sigma"
     } else if (dia == 31) {
         patente = "Jamanta Sigma"
-    } else if (dia > 31) {
-        dia = 31
-        inputDia.value = "31"
     }
 
     pResultado.innerHTML = `Patente: ${patente}`
