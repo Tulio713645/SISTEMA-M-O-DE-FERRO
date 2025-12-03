@@ -1,0 +1,12 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* começa de cima */
+  align-items: center;
+  text-align: center;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  padding-top: 100px; /* distância do topo */
+}

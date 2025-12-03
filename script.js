@@ -49,7 +49,7 @@ function enviar() {
         patente = "Jamanta Sigma"
     }
 
-    pResultado.innerHTML `Patente: ${patente}`
+    pResultado.innerHTML = `Patente: ${patente}`
 }
 
 btnEnviar.addEventListener("click", enviar)
