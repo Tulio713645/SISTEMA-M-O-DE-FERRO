@@ -5,7 +5,7 @@ const btnEnviar = document.querySelector("#btnEnviar")
 const pResultado = document.querySelector("#resultado")
 
 function enviar() {
-    const dia = parseInt(inputDia.value)
+    let dia = parseInt(inputDia.value)
 
     let patente = ""
 
@@ -47,6 +47,9 @@ function enviar() {
         patente = "Jamanta pré-sigma"
     } else if (dia == 31) {
         patente = "Jamanta Sigma"
+    } else if (dia > 31) {
+        dia = 31
+        inputDia.value = "31"
     }
 
     pResultado.innerHTML = `Patente: ${patente}`
